@@ -6,9 +6,7 @@ The project focuses on a clean user experience, maintainable architecture, stric
 
 ## Live Demo
 
-**Public URL:** Coming soon
-
-Replace this value with the production URL after deploying the application.
+[Open Movie Explorer](https://heymovieexplorer.netlify.app/)
 
 ## Features
 
@@ -76,15 +74,15 @@ src/
 
 ## Routes
 
-| Route | Description |
-| --- | --- |
-| `/` | Home page with featured and categorized movies |
-| `/search` | Movie and actor search with filters |
-| `/movie/:id` | Movie details, cast, trailer, and recommendations |
-| `/person/:id` | Actor profile and filterable filmography |
-| `/favorites` | Locally saved favorite movies |
-| `/about` | Project information and TMDB attribution |
-| `*` | Custom not-found page |
+| Route         | Description                                       |
+| ------------- | ------------------------------------------------- |
+| `/`           | Home page with featured and categorized movies    |
+| `/search`     | Movie and actor search with filters               |
+| `/movie/:id`  | Movie details, cast, trailer, and recommendations |
+| `/person/:id` | Actor profile and filterable filmography          |
+| `/favorites`  | Locally saved favorite movies                     |
+| `/about`      | Project information and TMDB attribution          |
+| `*`           | Custom not-found page                             |
 
 ## Getting Started
 
@@ -129,18 +127,18 @@ src/
 
 ## Available Scripts
 
-| Command | Description |
-| --- | --- |
-| `pnpm dev` | Start the local development server |
-| `pnpm build` | Run TypeScript and create a production build |
-| `pnpm lint` | Run type-aware ESLint checks |
-| `pnpm preview` | Preview the production build locally |
+| Command        | Description                                  |
+| -------------- | -------------------------------------------- |
+| `pnpm dev`     | Start the local development server           |
+| `pnpm build`   | Run TypeScript and create a production build |
+| `pnpm lint`    | Run type-aware ESLint checks                 |
+| `pnpm preview` | Preview the production build locally         |
 
 ## Environment Variables
 
-| Variable | Required | Description |
-| --- | --- | --- |
-| `VITE_TMDB_ACCESS_TOKEN` | Yes | TMDB API read access token |
+| Variable                 | Required | Description                |
+| ------------------------ | -------- | -------------------------- |
+| `VITE_TMDB_ACCESS_TOKEN` | Yes      | TMDB API read access token |
 
 Never commit `.env.local` or expose private credentials in the repository.
 
