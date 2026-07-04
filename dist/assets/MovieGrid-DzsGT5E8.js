@@ -1,0 +1,1 @@
+import{g as e,n as t}from"./index-BfyTr8i3.js";var n=e();function r({movies:e}){return(0,n.jsx)(`div`,{className:`movie-grid`,children:e.map(e=>(0,n.jsx)(t,{movie:e},e.id))})}export{r as t};
