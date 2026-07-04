@@ -1,0 +1,38 @@
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.14), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.35s infinite;
+}
+
+.skeleton--heading {
+  width: 170px;
+  height: 22px;
+  margin-bottom: 14px;
+}
+
+.skeleton--poster {
+  aspect-ratio: 2 / 1.78;
+  border-radius: 0;
+}
+
+.skeleton--title {
+  width: 82%;
+  height: 12px;
+  margin-bottom: 10px;
+}
+
+.skeleton--meta {
+  width: 55%;
+  height: 9px;
+}
+

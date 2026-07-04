@@ -1,0 +1,29 @@
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  position: relative;
+  margin: 0;
+  padding-left: 17px;
+  font-size: 1.1rem;
+}
+
+.section-heading h2::before {
+  content: '';
+  position: absolute;
+  inset: 2px auto 2px 0;
+  width: 3px;
+  border-radius: 99px;
+  background: #694df8;
+}
+
+.section-heading a {
+  color: var(--primary-hover);
+  font-size: 0.86rem;
+  text-decoration: none;
+}
+

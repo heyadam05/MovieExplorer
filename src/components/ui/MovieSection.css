@@ -1,0 +1,40 @@
+.movie-section {
+  margin-top: 28px;
+}
+
+.movie-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(158px, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  padding: 2px 2px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+@media (min-width: 1200px) {
+  .movie-row {
+    grid-auto-columns: minmax(160px, 1fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .movie-row {
+    grid-auto-columns: minmax(170px, 27vw);
+  }
+}
+
+@media (max-width: 700px) {
+  .movie-row {
+    grid-auto-columns: minmax(155px, 48vw);
+  }
+}
+
+@media (max-width: 420px) {
+  .movie-row {
+    grid-auto-columns: 72vw;
+  }
+}

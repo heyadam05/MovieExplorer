@@ -1,0 +1,246 @@
+.person-page {
+  padding-top: 24px;
+}
+
+.person-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.person-back:hover {
+  color: var(--text);
+}
+
+.person-header {
+  display: grid;
+  grid-template-columns: minmax(190px, 280px) minmax(0, 760px);
+  align-items: center;
+  gap: clamp(30px, 6vw, 72px);
+  padding: clamp(26px, 5vw, 64px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(99, 102, 241, 0.18), transparent 32%),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.person-photo {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #334155, #111827);
+  color: #fff;
+  font-size: 4rem;
+}
+
+.person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-header h1 {
+  margin: 18px 0 12px;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+
+.person-header p {
+  max-width: 720px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.person-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.person-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.person-filmography {
+  margin-top: 38px;
+}
+
+.person-filmography__count {
+  margin: 14px 0 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.person-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) repeat(4, auto) auto;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
+}
+
+.person-filters__search {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-soft);
+  color: var(--muted);
+}
+
+.person-filters__search:focus-within {
+  border-color: var(--primary);
+}
+
+.person-filters__search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+}
+
+.person-filters select {
+  height: 44px;
+  padding: 0 34px 0 11px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-soft);
+  color: var(--text);
+}
+
+.person-filters__clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.person-filters__clear:hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.person-filmography__empty {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.person-filmography__empty h3 {
+  margin: 14px 0 4px;
+  color: var(--text);
+}
+
+.person-filmography__empty p {
+  margin: 0 0 20px;
+}
+
+.person-state {
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .person-filters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .person-filters__search {
+    grid-column: 1 / -1;
+  }
+
+  .person-filters select,
+  .person-filters__clear {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .person-header {
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .person-header h1 {
+    margin-top: 12px;
+    font-size: 2.2rem;
+  }
+
+  .person-header p {
+    grid-column: 1 / -1;
+  }
+
+  .person-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .person-filters__search {
+    grid-column: 1 / -1;
+  }
+
+  .person-filters select,
+  .person-filters__clear {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .person-header {
+    grid-template-columns: 1fr;
+  }
+
+  .person-photo {
+    width: 145px;
+  }
+
+  .person-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .person-filters__search {
+    grid-column: auto;
+  }
+
+  .person-filters__clear {
+    min-height: 44px;
+  }
+}
